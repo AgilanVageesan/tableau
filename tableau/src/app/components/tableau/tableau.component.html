@@ -1,0 +1,20 @@
+<div class="container" style="margin-top: 0.5%;">
+    <h1 style="text-align: center;">COVID-DASHBOARD</h1>
+    <!-- <button (click)="getSelectedRows()">Get Selected Rows</button> -->
+    <div class="form-group">
+        <input #searchinput type="email" (keyup)="agGrid.api.setQuickFilter(searchinput.value)"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search country">
+      </div>
+<ag-grid-angular
+    #agGrid
+    style="height: 70vh;margin-top: 1%;"
+    class="ag-theme-alpine"
+    [rowData]="rowData"
+    [enableRangeSelection]="true"
+    [rowDragManaged]="true"
+    rowSelection="multiple"
+    (gridReady)="onGridReady($event)"
+    [suppressDragLeaveHidesColumns]="true"
+    [animateRows]="true"
+    [columnDefs]="columnDefs">
+</ag-grid-angular>
+</div>
