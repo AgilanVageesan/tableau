@@ -1,20 +1,15 @@
 <div class="container" style="margin-top: 0.5%;">
-    <h1 style="text-align: center;">COVID-DASHBOARD</h1>
-    <!-- <button (click)="getSelectedRows()">Get Selected Rows</button> -->
-    <div class="form-group">
-        <input #searchinput type="email" (keyup)="agGrid.api.setQuickFilter(searchinput.value)"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search country">
-      </div>
-<ag-grid-angular
-    #agGrid
-    style="height: 70vh;margin-top: 1%;"
-    class="ag-theme-alpine"
-    [rowData]="rowData"
-    [enableRangeSelection]="true"
-    [rowDragManaged]="true"
-    rowSelection="multiple"
-    (gridReady)="onGridReady($event)"
-    [suppressDragLeaveHidesColumns]="true"
-    [animateRows]="true"
-    [columnDefs]="columnDefs">
-</ag-grid-angular>
+    <h1 style="text-align: center;color: #3f51b5;">COVID-DASHBOARD</h1>
+    <form class="example-form">
+        <mat-form-field style="width: -webkit-fill-available;">
+            <mat-label>Search Country</mat-label>
+            <input matInput #searchinput style="font-size: x-large;" type="email" (keyup)="agGrid.api.setQuickFilter(searchinput.value)"
+                id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search for a country">
+        </mat-form-field>
+
+    </form>
+    <ag-grid-angular #agGrid style="height: 70vh;margin-bottom: 0.5%;" class="ag-theme-alpine" [rowData]="rowData"
+        [enableRangeSelection]="true" [rowDragManaged]="true" rowSelection="multiple" (gridReady)="onGridReady($event)"
+        [suppressDragLeaveHidesColumns]="true" [animateRows]="true" [columnDefs]="columnDefs">
+    </ag-grid-angular>
 </div>

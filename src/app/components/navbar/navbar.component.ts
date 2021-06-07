@@ -8,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  myDate: Date;
+  constructor() {}
 
   ngOnInit(): void {
+    this.TimeTicker();
   }
-
+  
+  TimeTicker() {
+    setInterval(() => {
+      this.myDate = new Date();
+    }, 1000);
+  }
 }

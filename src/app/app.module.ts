@@ -14,6 +14,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatButtonModule} from '@angular/material/button';
 import { HomeComponent } from './components/home/home.component';
+import {MatInputModule} from '@angular/material/input';
+import { DatePipe } from '@angular/common';
 
 
 
@@ -36,9 +38,10 @@ import { HomeComponent } from './components/home/home.component';
     MatToolbarModule,
     MatProgressBarModule,
     MatTabsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
