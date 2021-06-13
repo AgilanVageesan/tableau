@@ -16,6 +16,11 @@ import {MatButtonModule} from '@angular/material/button';
 import { HomeComponent } from './components/home/home.component';
 import {MatInputModule} from '@angular/material/input';
 import { DatePipe } from '@angular/common';
+import { ChartComponent } from './components/chart/chart.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -26,7 +31,9 @@ import { DatePipe } from '@angular/common';
     AppComponent,
     TableauComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    ChartComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +46,9 @@ import { DatePipe } from '@angular/common';
     MatProgressBarModule,
     MatTabsModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
+    NgbModule
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]
