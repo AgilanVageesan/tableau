@@ -1,0 +1,36 @@
+<!-- todo-list.component.html -->
+
+<!-- Add Todo Button -->
+<button mat-raised-button color="primary" (click)="openAddDialog()">Add Todo</button>
+
+<!-- Todo List -->
+<mat-list>
+  <mat-list-item *ngFor="let todo of todos">
+    <div>
+      <h3 mat-line>{{ todo.task }}</h3>
+      <p mat-line>{{ todo.description }}</p>
+    </div>
+    <div>
+      <button mat-icon-button (click)="openEditDialog(todo)">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button (click)="deleteTodo(todo)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </mat-list-item>
+</mat-list>
+
+<!-- Dialog for Add/Edit -->
+<mat-dialog-content>
+  <mat-form-field>
+    <input matInput placeholder="Task" [(ngModel)]="dialogData.task">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Description" [(ngModel)]="dialogData.description">
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="closeDialog()">Cancel</button>
+  <button mat-button color="primary" (click)="saveDialog()">Save</button>
+</mat-dialog-actions>
