@@ -34,3 +34,78 @@
   <button mat-button (click)="closeDialog()">Cancel</button>
   <button mat-button color="primary" (click)="saveDialog()">Save</button>
 </mat-dialog-actions>
+
+///
+<!-- todo-list.component.html -->
+
+<!-- Add Todo Button -->
+<button mat-flat-button color="primary" (click)="openAddDialog()">Add Todo</button>
+
+<!-- Todo List -->
+<mat-list>
+  <mat-list-item *ngFor="let todo of todos" class="todo-item">
+    <div class="todo-content">
+      <h3 class="todo-task">{{ todo.task }}</h3>
+      <p class="todo-description">{{ todo.description }}</p>
+    </div>
+    <div class="todo-actions">
+      <button mat-icon-button (click)="openEditDialog(todo)" class="action-button">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button (click)="deleteTodo(todo)" class="action-button">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </mat-list-item>
+</mat-list>
+
+<!-- ... Dialog and Form HTML ... -->
+////
+
+/* todo-list.component.css */
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.todo-item:hover {
+  background-color: #f5f5f5;
+}
+
+.todo-content {
+  flex: 1;
+}
+
+.todo-task {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.todo-description {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #616161;
+}
+
+.todo-actions {
+  display: flex;
+  align-items: center;
+}
+
+.action-button {
+  margin-left: 10px;
+  color: #757575;
+  transition: color 0.3s ease;
+}
+
+.action-button:hover {
+  color: #333;
+}
+
+
+
