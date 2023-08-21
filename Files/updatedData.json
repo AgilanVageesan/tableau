@@ -1,0 +1,67 @@
+[
+  {
+    "status": "applicationCreated",
+    "description": "You've successfully submitted your application. It's now recorded in our system and waiting to be processed.",
+    "icon": "receipt"
+  },
+  {
+    "status": "inProgress",
+    "description": "Your application is being actively reviewed by our team. We're working to ensure all the information is accurate and complete.",
+    "icon": "pending"
+  },
+  {
+    "status": "bureauCheck",
+    "description": "We're conducting a credit assessment to better understand your financial background. This step helps us tailor the best possible offer for you.",
+    "icon": "account_balance"
+  },
+  {
+    "status": "offerAcceptance",
+    "description": "Congratulations! We've made an offer based on the information you provided. Now, we're waiting for you to accept the offer and move forward.",
+    "icon": "check_circle"
+  },
+  {
+    "status": "documentAcceptance",
+    "description": "We need your confirmation on the provided documents. Please review the details carefully and let us know if everything is in order.",
+    "icon": "description"
+  },
+  {
+    "status": "fulfillment",
+    "description": "To finalize the process, we're ensuring all the necessary requirements are met. This may include additional documentation or specific actions from your end.",
+    "icon": "done_all"
+  },
+  {
+    "status": "completed",
+    "description": "Congratulations! Your application journey is complete. All the steps have been successfully finished, and your application is now closed.",
+    "icon": "check_circle_outline"
+  },
+  {
+    "status": "declined",
+    "description": "We regret to inform you that your application has been declined at this time. If you have any questions, feel free to reach out to our team.",
+    "icon": "cancel"
+  },
+  {
+    "status": "expired",
+    "description": "Unfortunately, your application has expired as it was not completed within the specified timeframe. You can consider reapplying when you're ready.",
+    "icon": "access_time"
+  },
+  {
+    "status": "autoAbandoned",
+    "description": "Your application was automatically abandoned due to inactivity. If you're still interested, please start a new application.",
+    "icon": "highlight_off"
+  },
+  {
+    "status": "stale",
+    "description": "Your application has become stale due to a lack of updates. Please reach out to us if you'd like to proceed or update your application.",
+    "icon": "hourglass_empty"
+  },
+  {
+    "status": "dropout",
+    "description": "You've chosen to discontinue your application before its completion. If you change your mind, you're welcome to restart the application process.",
+    "icon": "cancel_presentation"
+  },
+  {
+    "status": "canceled",
+    "description": "Your application has been canceled, either at your request or due to specific reasons. Feel free to contact us for more information.",
+    "icon": "cancel_schedule_send"
+  }
+]
